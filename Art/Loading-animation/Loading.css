@@ -1,0 +1,89 @@
+body
+{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;  /*moves everything centered*/
+  background: #060606;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loader{
+  position: absolute;
+  top: 50%; /*moves its position*/
+  left: 50%; /*moves its position*/
+  transform: translate(-50%,-50%);
+  width: 400px; /*how big the ratio of the yellow circle is*/
+  height: 400px;
+  box-sizing: border-box;
+}
+
+/*Makes it go in circles*/
+.loader .face{
+  position: absolute;
+  border:3px solid #060606; /*thickness of circle*/ 
+}
+
+
+.loader .face.face1{
+  top: 90px; /*makes width of the circle*/
+  left: 90px; /*makes width of the circle*/
+  right: 90px; /*makes width of the circle*/
+  bottom: 90px;   /*makes width of the circle*/
+  background:090909; 
+  /*x-shadow:0 0 10px rgba(0, 0, 0, 1);*/
+  border-radius: 50%; /*makes it a circle*/
+  border-left: 3px solid #D631D4; /*purple and thikness px*/
+  border-top: 3px solid #D631D4;
+  animation: ani1 3s linear infinite;
+}
+
+
+.loader .face.face2{
+  top: 60px; /*makes width of the circle*/
+  left: 60px; /*makes width of the circle*/
+  right: 60px; /*makes width of the circle*/
+  bottom: 60px; /*makes width of the circle*/
+  /*background:#090909;
+  box-shadow:0 0 10px rgba(0,0,0,1);*/
+  border-radius: 50%;
+  border-right: 3px solid #03a9f4;/* blue color and thikness */
+  border-bottom: 3px solid #03a9f4;
+  animation: ani2 3s linear infinite;
+}
+
+
+/*MAKES THEM SPIN*/
+@keyframes ani1{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+
+@keyframes ani2{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+
+
+.container p
+{
+  position: flex;
+  color: #fff;
+  font-size: 1.3em;
+  font-family: consolas;
+  bottom: -80px;
+  letter-spacing: 0.10em;
+}
+  
+  
